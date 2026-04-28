@@ -6,7 +6,7 @@
 ════════════════════════════════════════════════════════════════ */
 
 /* Troque pelo número real quando tiver (formato: 55 + DDD + número, só dígitos) */
-const WHATSAPP_NUMERO = "5500000000000";
+const WHATSAPP_NUMERO = "5511968779018";
 const WHATSAPP_MENSAGEM = "Oi, quero um orçamento da Paraíso VIP Estamparia";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_MENSAGEM)}`;
 
