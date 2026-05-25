@@ -8,14 +8,16 @@
 /* Troque pelo número real quando tiver (formato: 55 + DDD + número, só dígitos) */
 const WHATSAPP_NUMERO = "5511968779018";
 const WHATSAPP_MENSAGEM = "Oi, quero um orçamento da Paraíso VIP Estamparia";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_MENSAGEM)}`;
+const buildWhatsAppLink = (message = WHATSAPP_MENSAGEM) =>
+  `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(message)}`;
 
 const IMAGE_FALLBACK = "assets/placeholder-real.svg";
 
 
 /* ── Aplica link do WhatsApp em todos os CTAs ────────────────── */
 document.querySelectorAll(".js-whatsapp-link").forEach((el) => {
-  el.setAttribute("href", WHATSAPP_LINK);
+  const customMessage = el.dataset.whatsappMessage || WHATSAPP_MENSAGEM;
+  el.setAttribute("href", buildWhatsAppLink(customMessage));
   el.setAttribute("target", "_blank");
   el.setAttribute("rel", "noopener noreferrer");
 });
