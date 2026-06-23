@@ -534,7 +534,186 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
 }
 
 
+/* ════════════════════════════════════════════════════════════════════════
+   DOBRA EXTRA - DIA DOS NAMORADOS
+════════════════════════════════════════════════════════════════════════ */
+.s-namorados {
+  padding: clamp(1.2rem, 3vw, 2rem) 0 var(--section-pad);
+  background:
+    radial-gradient(circle at top, rgba(201,161,74,.12), transparent 28%),
+    linear-gradient(180deg, var(--cream) 0%, #fff 100%);
+}
 
+.namorados-shell {
+  position: relative;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1.35rem, 3vw, 2.6rem);
+  border-radius: 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(255,220,232,.16), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(201,161,74,.18), transparent 24%),
+    linear-gradient(135deg, #0c1242 0%, #35104c 48%, #911a43 100%);
+  box-shadow: 0 18px 50px rgba(20, 8, 46, .18);
+}
+
+.namorados-shell::before,
+.namorados-shell::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.namorados-shell::before {
+  width: 320px;
+  height: 320px;
+  top: -140px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(255,255,255,.14), rgba(255,255,255,0));
+}
+
+.namorados-shell::after {
+  width: 280px;
+  height: 280px;
+  left: -100px;
+  bottom: -130px;
+  background: radial-gradient(circle, rgba(244,228,176,.18), rgba(244,228,176,0));
+}
+
+.namorados-copy,
+.namorados-art {
+  position: relative;
+  z-index: 1;
+}
+
+.namorados-copy {
+  color: var(--white);
+}
+
+.namorados-copy h2 {
+  color: var(--white);
+  margin-bottom: .9rem;
+  max-width: 12ch;
+}
+
+.namorados-copy h2 em {
+  color: var(--gold-light);
+}
+
+.namorados-copy > p {
+  max-width: 56ch;
+  color: rgba(255,255,255,.8);
+  font-size: 1rem;
+}
+
+.namorados-offers {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.namorados-item {
+  display: block;
+  padding: 1.15rem;
+  border-radius: 22px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.namorados-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,.32);
+  background: rgba(255,255,255,.14);
+}
+
+.namorados-item h3 {
+  margin: .6rem 0 .4rem;
+  color: var(--white);
+  font-size: 1.15rem;
+}
+
+.namorados-item p {
+  color: rgba(255,255,255,.78);
+  font-size: .94rem;
+}
+
+.namorados-item__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  background: rgba(244,228,176,.16);
+  color: var(--gold-light);
+  border: 1px solid rgba(244,228,176,.26);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.namorados-item__tag--soft {
+  background: rgba(255,255,255,.12);
+  color: #ffd7e1;
+  border-color: rgba(255,255,255,.2);
+}
+
+.namorados-item__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.namorados-item__footer strong {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  line-height: 1;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.namorados-item__cta {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  transition: color .2s ease;
+}
+
+.namorados-item:hover .namorados-item__cta {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.namorados-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .9rem;
+  margin-top: 1.8rem;
+}
+
+.namorados-note {
+  color: rgba(255,255,255,.72);
+  font-size: .88rem;
+}
+
+.namorados-art {
+  max-width: 620px;
+}
+
+.namorados-art img {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 24px 60px rgba(8, 7, 34, .42);
+}
 
 
 /* ════════════════════════════════════════════════════════════════
@@ -1108,9 +1287,12 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
   .fx-9  { top: 50%; left:  2%; width: 110px; height: 140px; }
   .fx-10 { top:  8%; left: 58%; width:  95px; height: 115px; }
   .fx-11 { top: 48%; left: 90%; width: 100px; height: 125px; }
-  .fx-12 { top: 86%; left: 66%; width: 110px; height: 130px; }
-
-
+  .namorados-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 560px);
+  }
+  .namorados-offers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   .cat-grid { grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 
@@ -1215,7 +1397,26 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
 
   .sec-head { margin-bottom: 2rem; }
 
-
+  .namorados-shell {
+    border-radius: 24px;
+    padding: 1.1rem;
+  }
+  .namorados-art {
+    order: -1;
+  }
+  .namorados-copy h2 {
+    max-width: 100%;
+  }
+  .namorados-item__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .namorados-actions {
+    align-items: stretch;
+  }
+  .namorados-actions .btn {
+    width: 100%;
+  }
 
   .step { grid-template-columns: 90px 1fr; gap: 1rem; }
   .step-photo { aspect-ratio: 1; }
