@@ -717,6 +717,14 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
 
 
 /* ════════════════════════════════════════════════════════════════
+   DOBRA 1.5 — DESTAQUE CAMISAS
+════════════════════════════════════════════════════════════════ */
+.s-destaque-camisas {
+  background: var(--cream);
+  padding: var(--section-pad) 0;
+}
+
+/* ════════════════════════════════════════════════════════════════
    DOBRA 2 — ESCOLHA RÁPIDA (6 categorias)
 ════════════════════════════════════════════════════════════════ */
 .s-categorias {
